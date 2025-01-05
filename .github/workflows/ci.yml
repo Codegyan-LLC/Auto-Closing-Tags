@@ -22,10 +22,13 @@ jobs:
       - name: Install Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 18.x
+          node-version: 16.x
 
       - name: Install Dependencies
         run: npm install
+
+      - name: Install VSCE
+        run: npm install -g vsce
 
       - name: Build Extension
         run: npm run vscode:prepublish
