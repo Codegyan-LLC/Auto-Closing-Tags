@@ -16,28 +16,19 @@ jobs:
     runs-on: ${{ matrix.os }}
 
     steps:
-      - name: Checkout Source Code
+      - name: Checkout
         uses: actions/checkout@v2
 
-      - name: Install Node.js
+      - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 16.x
+          node-version: '18.x'  # Using Node.js 18.x to avoid the ReadableStream issue
 
-      - name: Install Dependencies
+      - name: Install dependencies
         run: npm install
 
-      - name: Install VSCE
-        run: npm install -g vsce
+      - name: Install vsce globally
+        run: npm install -g vsce  # Installing vsce globally to avoid missing package errors
 
-      - name: Build Extension
-        run: npm run vscode:prepublish
-
-    #   - name: Run Tests
-    #     run: npm test
-
-      - name: Package Extension
-        run: npx vsce package
-
-    #   - name: Verify Extension
-    #     run: npx vscode-test
+      - name: Build and package extension
+        run: npm run vscode:prepublish  # Running your prepublish script
