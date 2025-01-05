@@ -1,0 +1,212 @@
+{
+  "name": "auto-closing-tags",
+  "displayName": "Auto Closing Tags",
+  "description": "Automatically close tags for multiple languages",
+  "version": "0.0.1",
+  "publisher": "codegyan",
+  "author": "Prathmesh Yelne",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "icon": "images/icon.png",
+  "categories": [
+    "Other"
+  ],
+  "keywords": [
+    "Auto Closing Tags",
+    "Auto Close",
+    "vs extension",
+    "Fast Extension",
+    "coding",
+    "Codegyan",
+    "Prathmesh Yelne"
+  ],
+  "activationEvents": [
+    "onLanguage:html",
+    "onLanguage:xml",
+    "onLanguage:php",
+    "onLanguage:blade",
+    "onLanguage:ejs",
+    "onLanguage:jinja",
+    "onLanguage:javascript",
+    "onLanguage:javascriptreact",
+    "onLanguage:typescript",
+    "onLanguage:typescriptreact",
+    "onLanguage:vue",
+    "onLanguage:liquid",
+    "onLanguage:erb",
+    "onLanguage:lang-cfml",
+    "onLanguage:cfml",
+    "onCommand:auto-close-tag.closeTag"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "auto-close-tag.closeTag",
+        "title": "Insert Closing Tag"
+      }
+    ],
+    "configuration": {
+      "type": "object",
+      "title": "Auto Close Tag Settings",
+      "properties": {
+        "auto-close-tag.enableAutoCloseTag": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable auto-closing of tags"
+        },
+        "auto-close-tag.activationOnLanguage": {
+          "type": "array",
+          "default": [
+            "*"
+          ],
+          "description": "Languages to enable auto-closing for"
+        },
+        "auto-close-tag.disableOnLanguage": {
+          "type": "array",
+          "default": [],
+          "description": "Languages to disable auto-closing for"
+        },
+        "auto-close-tag.excludedTags": {
+          "type": "array",
+          "default": [
+            "br",
+            "img",
+            "input",
+            "hr",
+            "meta",
+            "link"
+          ],
+          "description": "Tags to exclude from auto-closing"
+        },
+        "auto-close-tag.insertSpaceBeforeSelfClosingTag": {
+          "type": "boolean",
+          "default": false,
+          "description": "Insert space before self-closing tags"
+        }
+      }
+    },
+    "languages": [
+      {
+        "id": "html",
+        "extensions": [
+          ".html"
+        ],
+        "configuration": "./language-configuration.json"
+      },
+      {
+        "id": "xml",
+        "extensions": [
+          ".xml"
+        ]
+      },
+      {
+        "id": "php",
+        "extensions": [
+          ".php"
+        ]
+      },
+      {
+        "id": "blade",
+        "extensions": [
+          ".blade.php"
+        ]
+      },
+      {
+        "id": "ejs",
+        "extensions": [
+          ".ejs"
+        ]
+      },
+      {
+        "id": "jinja",
+        "extensions": [
+          ".jinja",
+          ".jinja2"
+        ]
+      },
+      {
+        "id": "javascript",
+        "extensions": [
+          ".js"
+        ]
+      },
+      {
+        "id": "javascriptreact",
+        "extensions": [
+          ".jsx"
+        ]
+      },
+      {
+        "id": "typescript",
+        "extensions": [
+          ".ts"
+        ]
+      },
+      {
+        "id": "typescriptreact",
+        "extensions": [
+          ".tsx"
+        ]
+      },
+      {
+        "id": "vue",
+        "extensions": [
+          ".vue"
+        ]
+      },
+      {
+        "id": "liquid",
+        "extensions": [
+          ".liquid"
+        ]
+      },
+      {
+        "id": "erb",
+        "extensions": [
+          ".erb"
+        ]
+      },
+      {
+        "id": "lang-cfml",
+        "extensions": [
+          ".cfml"
+        ]
+      },
+      {
+        "id": "cfml",
+        "extensions": [
+          ".cfm"
+        ]
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "webpack",
+    "watch": "webpack --watch",
+    "package": "webpack --mode production --devtool hidden-source-map",
+    "compile-tests": "tsc -p . --outDir out",
+    "watch-tests": "tsc -p . -w --outDir out",
+    "pretest": "npm run compile-tests && npm run compile && npm run lint",
+    "lint": "eslint src"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.17.11",
+    "@types/vscode": "^1.96.0",
+    "@typescript-eslint/eslint-plugin": "^8.10.0",
+    "@typescript-eslint/parser": "^8.7.0",
+    "@vscode/test-cli": "^0.0.10",
+    "@vscode/test-electron": "^2.4.1",
+    "chai": "^5.1.2",
+    "eslint": "^9.13.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.6.3",
+    "vscode-test": "^1.6.1",
+    "webpack": "^5.95.0",
+    "webpack-cli": "^5.1.4"
+  }
+}
