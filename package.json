@@ -2,7 +2,7 @@
   "name": "auto-closing-tags",
   "displayName": "Auto Closing Tags",
   "description": "Automatically close tags for multiple languages",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "publisher": "codegyan",
   "author": "Prathmesh Yelne",
   "engines": {
@@ -21,6 +21,17 @@
     "Codegyan",
     "Prathmesh Yelne"
   ],
+  "bugs": {
+			"url": "https://github.com/Codegyan-LLC/Auto-Closing-Tags/issues"
+	},
+  "sponsor": {
+    "url": "https://github.com/sponsors/prathmeshyelne"
+  },
+  "repository": {
+			"type": "git",
+			"url": "https://github.com/Codegyan-LLC/Auto-Closing-Tags.git"
+	},
+	"homepage": "https://github.com/Codegyan-LLC/Auto-Closing-Tags/blob/master/README.md",
   "activationEvents": [
     "onLanguage:html",
     "onLanguage:xml",

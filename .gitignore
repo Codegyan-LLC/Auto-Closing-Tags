@@ -38,3 +38,7 @@ coverage/
 dist/
 out/
 temp/
+Build/
+
+#Build Extension Shell Script
+build-extension.sh
