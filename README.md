@@ -1,5 +1,8 @@
 # Auto Closing Tags
 
+![Visual Studio Marketplace Downloads](https://img.shields.io/visual-studio-marketplace/d/Codegyan.auto-closing-tags?style=flat&link=https%3A%2F%2Fmarketplace.visualstudio.com%2Fitems%3FitemName%3DCodegyan.auto-closing-tags)
+
+
 **Auto Closing Tags** is a Visual Studio Code extension that automatically inserts closing tags for multiple programming and markup languages. This extension enhances your coding efficiency by reducing the time spent on manually typing closing tags.
 
 ## Features

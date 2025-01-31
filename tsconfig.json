@@ -2,7 +2,7 @@
 	"compilerOptions": {
 	  "target": "es6",
 	  "module": "commonjs",
-	  "outDir": "out",
+	  "outDir": "./dist",
 	  "rootDir": ".",
 	  "strict": true,
 	  "esModuleInterop": true,
@@ -12,5 +12,5 @@
 	  "types": ["node"]
 	},
 	"include": ["src/**/*.ts", "test/**/*.ts"],
-	"exclude": ["node_modules", "out"]
+	"exclude": ["node_modules", ".vscode", "dist"]
 }
